@@ -1,0 +1,121 @@
+.background {
+    background: url(../images/bg-repeat.jpg) repeat-x;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    transform: scale(1.2);
+}
+
+.text-container h1 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 900;
+    width: 300px;
+}
+
+.text-container p {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 11px;
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    max-width: 340px;
+    min-height: 378px;
+    margin: 12px 30px;
+    padding: 20px;
+    transform: scale(1.2);
+}
+
+.form-container input {
+    width: 298px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.form-container .nome{
+    margin-top: 0;
+}
+
+
+.form-container span {
+    color: #F52E2E;
+    font-size: 8px;
+    font-weight: 400;
+    transition: 0.5s ease;
+}
+
+.form-container p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-container .mensagem {
+    height: 100px;
+    display: flex;
+    align-items: start;
+    padding-bottom: 75px;
+}
+
+.form-container .botao {
+    height: 41px;
+    color: white;
+    background-color: #3CCC87;
+    border: none;
+    transition: 0.5s ease;
+}
+
+.form-container .botao:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.01);
+}
+
+.span-escondido{
+    display: none;
+}
+
+.span-ativo{
+    display: block;
+}
+
+.campo-obrigatorio-span{
+    display: block;
+}
+
+.campo-obrigatorio-borda{
+    border: 1px solid #F52E2E;
+}
+
+.campo-preenchido-borda{
+    border: 1px solid #56f52e;
+}
+
+.form-container-borda-vermelha{
+    border: 2px solid #F52E2E ;
+}
