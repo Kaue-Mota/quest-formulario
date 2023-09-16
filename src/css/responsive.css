@@ -1,0 +1,13 @@
+@media (max-width:768px){
+    .container-all{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container{
+        text-align: center;
+        margin: 0;
+        margin-bottom: 6rem;
+    }
+
+}
