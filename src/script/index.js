@@ -1,62 +1,31 @@
-const inputs = document.querySelectorAll(".input")
-const submitButton = document.querySelector(".botao")
-const obrigatorioText = document.querySelectorAll(".campo-obrigatorio-text")
-const formularioContainer = document.querySelector(".form-container")
+const inputs = document.querySelectorAll(".input");
+const textObrigatorio = document.querySelectorAll(".text-obrigatorio");
+const botaoSubmit = document.getElementById("button-submit");
 
-console.log(formularioContainer)
+botaoSubmit.addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o envio do formulário para poder validar antes
 
+    let valido = true;
 
-for (let i of obrigatorioText) {
-    i.style.display = "none";
-}
+    // Verifica se os campos foram preenchidos
+    inputs.forEach((input, index) => {
+        const textoErro = textObrigatorio[index];
 
-submitButton.addEventListener("click", () => {
-
-
-    inputs.forEach(input => {
-
-        if (input.value !== "") {
-            input.classList.add("campo-preenchido-borda")
+        if (input.value === "") {
+            input.classList.add("nao-preenchido");
+            textoErro.classList.add("mostrar");
+            valido = false;
         } else {
-            input.classList.remove("campo-preenchido-borda")
-            input.classList.add("campo-obrigatorio-borda")
+            input.classList.remove("nao-preenchido");
+            input.classList.add("preenchido");
+            textoErro.classList.remove("mostrar");
         }
     });
 
-    if (inputs[0].value == "") {
-        obrigatorioText[0].classList.add("span-ativo")
-    } else {
-        obrigatorioText[0].classList.remove("span-ativo")
-        obrigatorioText[0].classList.add("span-escondido")
-    };
-
-    if (inputs[1].value == "") {
-        obrigatorioText[1].classList.add("span-ativo")
-    } else {
-        obrigatorioText[1].classList.remove("span-ativo")
-        obrigatorioText[1].classList.add("span-escondido")
-    };
-
-    if (inputs[2].value == "") {
-        obrigatorioText[2].classList.add("span-ativo")
-    } else {
-        obrigatorioText[2].classList.remove("span-ativo")
-        obrigatorioText[2].classList.add("span-escondido")
-    };
-
-    if (inputs[3].value == "") {
-        obrigatorioText[3].classList.add("span-ativo")
-    } else {
-        obrigatorioText[3].classList.remove("span-ativo")
-        obrigatorioText[3].classList.add("span-escondido")
-    };
-
-
-    for (let c of obrigatorioText) {
-        if (c.classList.contains("span-ativo")) {
-            c.style.display = "block";
-        } else {
-            c.style.display = "none";
-        }
+    // Se todos os campos estiverem preenchidos, permite o envio (aqui você pode adicionar a lógica de envio real)
+    if (valido) {
+        alert("Formulário enviado com sucesso!");
+        // Aqui você pode fazer o envio do formulário, se necessário
+        // document.getElementById("meuFormulario").submit();
     }
 });

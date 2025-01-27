@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário com validação</title>
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/responsive.css">
-
-
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 </head>
-
 <body>
-    <main class="background">
-        <div class="container-all">
-            <div class="text-container">
-                <h1>
-                    FICOU COM DÚVIDA? <br> NOS MANDE UMA MENSAGEM!
-                </h1>
-                <p>
-                    caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos
-                    de
-                    24h.
-                </p>
-            </div>
-            <section class="form-container ">
-                <input class="input nome" type="text" placeholder="Nome completo *">
-                <span class="campo-obrigatorio-text">campo obrigatorio</span>
-                <input class="input" type="email" placeholder="Email *">
-                <span class="campo-obrigatorio-text">campo obrigatorio</span>
-                <input class="input" type="tel" name="numero-de-telefone" id="telefone" placeholder="Telefone *">
-                <span class="campo-obrigatorio-text">campo obrigatorio</span>
-                <input class="mensagem input" type="text" placeholder="Menssagem *">
-                <span class="campo-obrigatorio-text">campo obrigatorio</span>
-                <p>*campos obrigatórios</p>
-                <input class="botao" type="submit">
-            </section>
+    <section>
+
+        <div class="text-container">
+            <h1 class="titulo">FICOU COM DÚVIDA? <br> NOS MANDE UMA MENSAGEM!</h1>
+                <p class="conteudo">caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+
         </div>
-    </main>
 
-    <script src="./src/script/index.js"></script>
+        <div class="formulario-container">
+
+            <input placeholder="Nome completo *" class="input input-name" type="text"></input>
+            <p class="text-obrigatorio ">campo obrigatório</p>
+
+            <input placeholder="Email *" class="input input-email" type="email"></input>
+            <p class="text-obrigatorio ">campo obrigatório</p>
+            
+            <input placeholder="Telefone *" class="input input-number"type="number"></input>
+            <p class="text-obrigatorio">campo obrigatório</p>
+
+            <input placeholder="Mensagem *" class="input input-message" type="text"></input>
+            <p class="text-obrigatorio">campo obrigatório</p>
+
+            <h3 class="campo-obrigatorio">*campos obrigatórios</h3>
+            <button id="button-submit" class="enviar" type="submit">Enviar</button>
+        </div>
+        
+
+    </section>
+
+
+    
+
+    <script src="src/script/index.js"></script>
 </body>
-
 </html>
